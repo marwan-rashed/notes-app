@@ -2,8 +2,9 @@ import express from 'express';
 import notes from './routes/notes.js';
 import note from './routes/note.js';
 
+import { PORT } from './config.js'
+
 const app = express()
-const PORT = 8000;
 
 app.use(express.json());
 app.use('/api/notes', notes);
@@ -19,3 +20,5 @@ app.get(
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT} ...`);
 });
+
+export default app;
