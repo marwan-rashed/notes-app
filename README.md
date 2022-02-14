@@ -1,5 +1,7 @@
 # Notes App
 
+Simple Notes services that allows user to take notes and also user can view, edit and delete his notes at any time
+
 ### Features
 - Add Note
 - Get All Notes
