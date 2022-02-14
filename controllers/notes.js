@@ -27,5 +27,15 @@ export default class NotesController {
             .catch((err) => console.log(err));
     }
 
-    static getNotes(req, res) {}
+    static getNotes(req, res) {
+        Note.find()
+            .select('title description timestamp -_id')
+            .then((result) => {
+                res.status(200).json({
+                    success: true,
+                    result
+                });
+            })
+            .catch((err) => console.log(err));
+    }
 }
