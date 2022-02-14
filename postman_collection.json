@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "c484e42e-6f18-4bed-ac55-ed03cf691b29",
+		"name": "notesApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "Create Note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test title\",\r\n    \"description\": \"description for test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Note",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test title\",\r\n    \"description\": \"description for test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/notes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"notes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-HdCJSvaS4I3/WptZr1G58H2N7Co\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Feb 2022 13:32:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"Note Created\",\n        \"noteId\": \"766c2aa6-0314-45be-9423-df7f486e7eeb\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Notes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Notes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/notes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"notes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "158"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9e-IvSNUOBq4ekPhQuEpyoShNGnmQo\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Feb 2022 14:09:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"result\": [\n        {\n            \"noteId\": \"766c2aa6-0314-45be-9423-df7f486e7eeb\",\n            \"title\": \"test title\",\n            \"description\": \"description for test\",\n            \"timestamp\": 1644845523\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Note",
+			"item": [
+				{
+					"name": "Get One Note",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/note/766c2aa6-0314-45be-9423-df7f486e7eeb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"note",
+								"766c2aa6-0314-45be-9423-df7f486e7eeb"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One Note",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/note/766c2aa6-0314-45be-9423-df7f486e7eeb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"note",
+										"766c2aa6-0314-45be-9423-df7f486e7eeb"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "130"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"82-8HtHFUKTuFp09t6d+/ZC4vdCYgM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Feb 2022 14:14:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"noteId\": \"766c2aa6-0314-45be-9423-df7f486e7eeb\",\n    \"title\": \"test title\",\n    \"description\": \"description for test\",\n    \"timestamp\": 1644845523\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Note",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/note/2483d490-eacf-4646-a2ae-d706d679fd97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"note",
+								"2483d490-eacf-4646-a2ae-d706d679fd97"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Note",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/note/2483d490-eacf-4646-a2ae-d706d679fd97",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"note",
+										"2483d490-eacf-4646-a2ae-d706d679fd97"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-eTmZWO2TPvTDL3ltERC8/tav/Yg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Feb 2022 14:17:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"Note Deleted\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Note",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"edit title\",\r\n    \"description\": \"description for test after edit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/note/766c2aa6-0314-45be-9423-df7f486e7eeb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"note",
+								"766c2aa6-0314-45be-9423-df7f486e7eeb"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Note",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"edit title\",\r\n    \"description\": \"description for test after edit\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/note/766c2aa6-0314-45be-9423-df7f486e7eeb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"note",
+										"766c2aa6-0314-45be-9423-df7f486e7eeb"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "167"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a7-7/dvqFBScvKTEECioRV0YvaGDGU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Feb 2022 14:34:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"result\": {\n        \"noteId\": \"766c2aa6-0314-45be-9423-df7f486e7eeb\",\n        \"title\": \"edit title\",\n        \"description\": \"description for test after edit\",\n        \"timestamp\": 1644849251\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
