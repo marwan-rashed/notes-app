@@ -1,8 +1,8 @@
 import express from 'express';
 import notes from './routes/notes.js';
 import note from './routes/note.js';
-
-import { PORT } from './config.js'
+import Mongoose from 'mongoose';
+import { PORT, databaseURL } from './config.js'
 
 const app = express()
 
@@ -16,6 +16,11 @@ app.get(
         res.json('Server running peacefully on port ' + PORT + ' ...');
     }
 );
+
+Mongoose
+    .connect(databaseURL + '/notes-app')
+    .then(() => console.log('Connected to MongoDB Successfully .'))
+    .catch((err) => console.log(err));
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT} ...`);
