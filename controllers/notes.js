@@ -29,7 +29,7 @@ export default class NotesController {
 
     static getNotes(req, res) {
         Note.find()
-            .select('title description timestamp -_id')
+            .select('title description timestamp noteId -_id')
             .then((result) => {
                 res.status(200).json({
                     success: true,
